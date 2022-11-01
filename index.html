@@ -1,54 +1,485 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-commerce Website Using Bootstrap</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/responsitive.css" />
-    <!-- bootstrap cdn -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body data-bs-spy="scroll" data-bs-target=".navbar">
-    <!-- NAVIGATION SECTION  -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>E-commerce Website Using Bootstrap</title>
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/responsitive.css" />
+        <!-- bootstrap cdn -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body data-bs-spy="scroll" data-bs-target=".navbar">
+        <!-- NAVIGATION SECTION  -->
+        <section id="header">
+            <nav class="navbar navbar-expand-lg fixed-top bg-white">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="/images/logo.avif" alt="logo" class="img-fluid logo-brand" />
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <i class="fas fa-stream navbar-toggler-icon"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#product">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#special">Specials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#testimonial">Testimonials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </section>
 
-    <!-- HOME SECTION  -->
+        <!-- HOME SECTION  -->
+        <section id="home" class="home pt-5 overflow-hidden">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                    ></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="home-banner home-banner-1"></div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="home-banner home-banner-2"></div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="home-banner home-banner-3"></div>
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev"
+                >
+                    <span class="carousel-control-prev-icon" aria-hidden="true">
+                        <i class="fa-solid fa-angle-left slider-icon"></i>
+                    </span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next"
+                >
+                    <span class="carousel-control-next-icon" aria-hidden="true">
+                        <i class="fa-solid fa-angle-right slider-icon"></i>
+                    </span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
 
-    <!-- PRODUCTS SECTION  -->
+            <!-- OFFER  -->
+            <div class="offers">
+                <div class="container">
+                    <div class="row">
+                        <!-- Offer 1 -->
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <a href="#">
+                                <div class="offer-box text-center position-relative">
+                                    <div class="offer-inner">
+                                        <div class="offer-image position-relative overflow-hidden">
+                                            <img src="/images/offer1.webp" alt="offer1" class="img-fluid" />
+                                            <div class="offer-overlay"></div>
+                                        </div>
+                                        <div class="offer-info">
+                                            <div class="offer-info-inner">
+                                                <p class="heading-bigger text-capitalize">Sale 30%</p>
+                                                <p class="offer-title-1 text-uppercase font-weight-bold">
+                                                    Don't miss this chance
+                                                </p>
+                                                <button class="btn btn-outline-danger text-uppercase mt-4">
+                                                    shop now
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Offer 2 -->
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <a href="#">
+                                <div class="offer-box text-center position-relative mb-4 mb-sm-0 mb-lg-0">
+                                    <div class="offer-inner">
+                                        <div class="offer-image position-relative overflow-hidden">
+                                            <img src="/images/offer2.webp" alt="offer1" class="img-fluid" />
+                                            <div class="offer-overlay"></div>
+                                        </div>
+                                        <div class="offer-info">
+                                            <div class="offer-info-inner">
+                                                <p class="heading-bigger text-capitalize">Sale 70%</p>
+                                                <p class="offer-title-1 text-uppercase font-weight-bold">
+                                                    Don't miss this chance
+                                                </p>
+                                                <button class="btn btn-outline-danger text-uppercase mt-4">
+                                                    shop now
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Offer 3 -->
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <a href="#">
+                                <div class="offer-box text-center position-relative">
+                                    <div class="offer-inner">
+                                        <div class="offer-image position-relative overflow-hidden">
+                                            <img src="/images/offer3.webp" alt="offer1" class="img-fluid" />
+                                            <div class="offer-overlay"></div>
+                                        </div>
+                                        <div class="offer-info">
+                                            <div class="offer-info-inner">
+                                                <p class="heading-bigger text-capitalize">Sale 70%</p>
+                                                <p class="offer-title-1 text-uppercase font-weight-bold">
+                                                    Don't miss this chance
+                                                </p>
+                                                <button class="btn btn-outline-danger text-uppercase mt-4">
+                                                    shop now
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Offer 4 -->
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <a href="#">
+                                <div class="offer-box text-center position-relative">
+                                    <div class="offer-inner">
+                                        <div class="offer-image position-relative overflow-hidden">
+                                            <img src="/images/offer4.webp" alt="offer1" class="img-fluid" />
+                                            <div class="offer-overlay"></div>
+                                        </div>
+                                        <div class="offer-info">
+                                            <div class="offer-info-inner">
+                                                <p class="heading-bigger text-capitalize">Sale 70%</p>
+                                                <p class="offer-title-1 text-uppercase font-weight-bold">
+                                                    Don't miss this chance
+                                                </p>
+                                                <button class="btn btn-outline-danger text-uppercase mt-4">
+                                                    shop now
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- SALES SECTION  -->
+        <!-- PRODUCTS SECTION  -->
+        <section id="products" class="products">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="headline text-center mb-5">
+                            <h2 class="pb-3 position-relative d-inline-block">FEATURED PRODUCTS</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4">
+                        <a href="#" class="d-block text-center mb-4">
+                            <div class="product-list">
+                                <div class="product-image position-relative">
+                                    <span class="sale">Sale</span>
+                                    <img
+                                        src="/images/products/p1-1.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-first"
+                                    />
+                                    <img
+                                        src="/images/products/p1-2.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-second"
+                                    />
+                                </div>
+                                <div class="product-name pt-3">
+                                    <h3 class="text-lowercase">
+                                        lucky boxy ss tee <br />
+                                        drew camo
+                                    </h3>
+                                    <p class="mb-0 amount">$400.00 <del>$580.00</del></p>
+                                    <button type="button" class="add_to_card">ADD TO CARD</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <a href="#" class="d-block text-center mb-4">
+                            <div class="product-list">
+                                <div class="product-image position-relative">
+                                    <span class="sale">Sale</span>
+                                    <img
+                                        src="/images/products/p1-1.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-first"
+                                    />
+                                    <img
+                                        src="/images/products/p1-2.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-second"
+                                    />
+                                </div>
+                                <div class="product-name pt-3">
+                                    <h3 class="text-lowercase">
+                                        lucky boxy ss tee <br />
+                                        drew camo
+                                    </h3>
+                                    <p class="mb-0 amount">$400.00 <del>$580.00</del></p>
+                                    <button type="button" class="add_to_card">ADD TO CARD</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <a href="#" class="d-block text-center mb-4">
+                            <div class="product-list">
+                                <div class="product-image position-relative">
+                                    <span class="sale">Sale</span>
+                                    <img
+                                        src="/images/products/p1-1.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-first"
+                                    />
+                                    <img
+                                        src="/images/products/p1-2.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-second"
+                                    />
+                                </div>
+                                <div class="product-name pt-3">
+                                    <h3 class="text-lowercase">
+                                        lucky boxy ss tee <br />
+                                        drew camo
+                                    </h3>
+                                    <p class="mb-0 amount">$400.00 <del>$580.00</del></p>
+                                    <button type="button" class="add_to_card">ADD TO CARD</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <a href="#" class="d-block text-center mb-4">
+                            <div class="product-list">
+                                <div class="product-image position-relative">
+                                    <span class="sale">Sale</span>
+                                    <img
+                                        src="/images/products/p1-1.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-first"
+                                    />
+                                    <img
+                                        src="/images/products/p1-2.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-second"
+                                    />
+                                </div>
+                                <div class="product-name pt-3">
+                                    <h3 class="text-lowercase">
+                                        lucky boxy ss tee <br />
+                                        drew camo
+                                    </h3>
+                                    <p class="mb-0 amount">$400.00 <del>$580.00</del></p>
+                                    <button type="button" class="add_to_card">ADD TO CARD</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <a href="#" class="d-block text-center mb-4">
+                            <div class="product-list">
+                                <div class="product-image position-relative">
+                                    <span class="sale">Sale</span>
+                                    <img
+                                        src="/images/products/p1-1.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-first"
+                                    />
+                                    <img
+                                        src="/images/products/p1-2.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-second"
+                                    />
+                                </div>
+                                <div class="product-name pt-3">
+                                    <h3 class="text-lowercase">
+                                        lucky boxy ss tee <br />
+                                        drew camo
+                                    </h3>
+                                    <p class="mb-0 amount">$400.00 <del>$580.00</del></p>
+                                    <button type="button" class="add_to_card">ADD TO CARD</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <a href="#" class="d-block text-center mb-4">
+                            <div class="product-list">
+                                <div class="product-image position-relative">
+                                    <span class="sale">Sale</span>
+                                    <img
+                                        src="/images/products/p1-1.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-first"
+                                    />
+                                    <img
+                                        src="/images/products/p1-2.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-second"
+                                    />
+                                </div>
+                                <div class="product-name pt-3">
+                                    <h3 class="text-lowercase">
+                                        lucky boxy ss tee <br />
+                                        drew camo
+                                    </h3>
+                                    <p class="mb-0 amount">$400.00 <del>$580.00</del></p>
+                                    <button type="button" class="add_to_card">ADD TO CARD</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <a href="#" class="d-block text-center mb-4">
+                            <div class="product-list">
+                                <div class="product-image position-relative">
+                                    <span class="sale">Sale</span>
+                                    <img
+                                        src="/images/products/p1-1.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-first"
+                                    />
+                                    <img
+                                        src="/images/products/p1-2.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-second"
+                                    />
+                                </div>
+                                <div class="product-name pt-3">
+                                    <h3 class="text-lowercase">
+                                        lucky boxy ss tee <br />
+                                        drew camo
+                                    </h3>
+                                    <p class="mb-0 amount">$400.00 <del>$580.00</del></p>
+                                    <button type="button" class="add_to_card">ADD TO CARD</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <a href="#" class="d-block text-center mb-4">
+                            <div class="product-list">
+                                <div class="product-image position-relative">
+                                    <span class="sale">Sale</span>
+                                    <img
+                                        src="/images/products/p1-1.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-first"
+                                    />
+                                    <img
+                                        src="/images/products/p1-2.webp"
+                                        alt="sale"
+                                        class="img-fluid product-image-second"
+                                    />
+                                </div>
+                                <div class="product-name pt-3">
+                                    <h3 class="text-lowercase">
+                                        lucky boxy ss tee <br />
+                                        drew camo
+                                    </h3>
+                                    <p class="mb-0 amount">$400.00 <del>$580.00</del></p>
+                                    <button type="button" class="add_to_card">ADD TO CARD</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- TESTIMONIAL SECTION  -->
+        <!-- SALES SECTION  -->
 
-    <!-- CONTACT SECTION  -->
+        <!-- TESTIMONIAL SECTION  -->
 
-    <!-- FOOTER  -->
+        <!-- CONTACT SECTION  -->
 
-    <!-- SCROLL BACK TO TOP  -->
-    <div id="scrollUp" title="Scroll to Top">
-        <a href="#home">
-            <span class="ti-arrow-up fs-4 text-white"></span> 
-        </a>
-    </div>
+        <!-- FOOTER  -->
 
-    <script src="js/index.js"></script>
-  </body>
+        <!-- SCROLL BACK TO TOP  -->
+        <div id="scrollUp" title="Scroll to Top">
+            <a href="#home">
+                <span class="ti-arrow-up fs-4 text-white"></span>
+            </a>
+        </div>
+
+        <script src="js/index.js"></script>
+    </body>
 </html>

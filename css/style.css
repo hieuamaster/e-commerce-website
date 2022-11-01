@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    /* Background Color */
+    --bg-danger: #f63440;
+    --bg-white: #fff;
+    --bg-light-white: #f5f5f5;
+
+    /* Text Color */
+    --primary-font: 'Poppins', sans-serif;
+    --text-white: #fff;
+    --text-black: #121212;
+    --text-danger: #ffc001;
+    --text-gray: #aaa;
+    --text-dark-gray: #777;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    background: var(--bg-white);
+    color: var(--text-black);
+    overflow-x: hidden;
+}
+
+/* Custom CSS */
+a,
+a:hover {
+    text-decoration: none;
+}
+p {
+    margin: 0;
+}
+.btn-danger {
+    background: var(--bg-danger);
+    border-color: var(--bg-danger);
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.btn-danger:hover {
+    color: var(--text-danger);
+    background: transparent;
+}
+
+/* Navigation CSS */
+#header .fixed-top {
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 5%);
+}
+#header .navbar-nav .nav-item .nav-link {
+    color: var(--text-black);
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    text-transform: lowercase;
+    /* text-align: center; */
+}
+#header .navbar-nav .nav-item .nav-link:hover,
+#header .navbar-nav .nav-item .nav-link.active {
+    color: var(--text-dark-gray);
+}
+
+#header .logo-brand {
+    width: 150px;
+    height: auto;
+}
+
+#header .navbar-toggler-icon {
+    width: unset;
+    height: unset;
+}
+#header .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* HOME SECTION  */
+.home .home-banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 650px;
+    /* position:relative; */
+}
+.home .home-banner-1 {
+    background-image: url('/images/bg1.jpeg');
+}
+.home .home-banner-2 {
+    background-image: url('/images/bg2.jpeg');
+}
+.home .home-banner-3 {
+    background-image: url('/images/bg3.png');
+}
+
+.home .carousel-indicators [data-bs-target] {
+    background-color: var(--text-dark-gray);
+    width: 2.5rem;
+    height: 0.313rem;
+}
+.home .carousel-control-next-icon,
+.home .carousel-control-prev-icon {
+    background: transparent;
+}
+.home .slider-icon {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-gray);
+}
+
+/* OFFER SECTION  */
+.offers {
+    padding-top: 8.75rem;
+}
+.offers .offer-box .offer-image::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -100%;
+    z-index: 2;
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    transform: skewX(-25deg);
+}
+.offers .offer-box .offer-image img {
+    transform: scale(1.02);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.offers .offer-box:hover .offer-image::before {
+    animation: effect_shine 1s;
+}
+@keyframes effect_shine {
+    100% {
+        left: 150%;
+    }
+}
+.offers .offer-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.offers .offer-box .offer-info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    transition: all 250ms ease-out;
+    justify-content: center;
+    align-items: center;
+}
+.offers .offer-box .offer-info .heading-bigger {
+    font-size: 3.375rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: var(--text-danger);
+}
+
+
+.offers .offer-box .offer-info .offer-title-1 {
+    color: var(--text-gray);
+    font-size: 1.125rem;
+    font-weight: 300;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+}
+.offers .offer-box .offer-info .offer-title-1:hover {
+    color: var(--text-white)
+}
+.offers .offer-box .offer-info .btn-outline-danger {
+    color: var(--text-gray);
+    border-color: var(--text-dark-gray);
+    transition: all 0.3s ease-in-out;
+}
+.offers .offer-box .offer-info .btn-outline-danger:hover {
+    border-color: var(--bg-white);
+    color: var(--text-white);
+    background-color: transparent;
+}
