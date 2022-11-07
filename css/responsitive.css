@@ -1,79 +1,81 @@
-@media (max-width:1030px){
-    /* Home CSS */ 
-   
-    .home .home-banner{
+@media (max-width: 1030px) {
+    /* Home CSS */
+
+    .home .home-banner {
         background-position: 65% center;
         min-height: 550px;
     }
 
     /* Offer CSS */
-    .offers .offer-box .offer-info .heading-bigger{
+    .offers .offer-box .offer-info .heading-bigger {
         font-size: 3rem;
     }
 
     /* Special CSS */
-    .special .countdown-container .countdown-counter li{
-        padding:1.5rem 1rem;
+    .special .countdown-container .countdown-counter li {
+        padding: 1.5rem 1rem;
     }
-      
+
+    /* Testimonial CSS  */
+    .testimonial-section .carousel-item {
+        padding: 8rem 3.125rem;
+    }
 }
-@media (max-width:991px){
-   
-    /* Special CSS */ 
-    .special .countdown-container{
-        padding-top:1rem;
-        padding-bottom:5rem;
+@media (max-width: 991px) {
+    /* Special CSS */
+    .special .countdown-container {
+        padding-top: 1rem;
+        padding-bottom: 5rem;
     }
 
-    /* Testimonial CSS */ 
-    .testimonial .carousel-control-prev{
-        left:-1.75rem;
+    /* Testimonial CSS */
+    .testimonial .carousel-control-prev {
+        left: -1.75rem;
     }
-    .testimonial .carousel-control-next{
-        right:-1.75rem;
+    .testimonial .carousel-control-next {
+        right: -1.75rem;
     }
-     
 }
-@media (max-width:767px){ 
-     /* Home CSS */ 
-     .home .home-banner{
-         background-position:50% center;
-         min-height: 450px;
-     }
-     
-     .home .slider-icon{
-         font-size: 2rem;
-     } 
+@media (max-width: 767px) {
+    /* Home CSS */
+    .home .home-banner {
+        background-position: 50% center;
+        min-height: 450px;
+    }
 
-     /* Product CSS */ 
-     .products .up_to_content h2{
-         font-size: 0.75rem;
-     }
+    .home .slider-icon {
+        font-size: 2rem;
+    }
 
-     /* Special CSS */ 
-     .special{
-         padding:4rem 0;
-     }
-     .special .countdown-container .countdown-counter li{
-         padding:1rem;
-         width:20%;
-     }
+    /* Product CSS */
+    .products .up_to_content h2 {
+        font-size: 0.75rem;
+    }
+    .offers {
+        padding-top: 1rem;
+    }
+    /* Special CSS */
+    .special {
+        padding: 4rem 0;
+    }
+    .special .countdown-container .countdown-counter li {
+        padding: 1rem;
+        width: 20%;
+    }
 
-     /* Testimonial CSS */ 
-     .testimonial .testimonial-wrapper{
-         padding:1rem;
-     }
+    /* Testimonial CSS */
+    .testimonial .testimonial-wrapper {
+        padding: 1rem;
+    }
     .testimonial .carousel-control-prev,
-    .testimonial .carousel-control-next{
-        display:none;
+    .testimonial .carousel-control-next {
+        display: none;
     }
 }
 
-@media (max-width:330px){ 
-   
-
-    /* Product CSS */ 
-    .products .up_to_content h2{
+@media (max-width: 330px) {
+    /* Product CSS */
+    .products .up_to_content h2 {
         font-size: 0.625rem;
     }
 }
