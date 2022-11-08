@@ -23,5 +23,18 @@ countDown();
 setInterval(countDown, 1000);
 
 // SCROLL BACK TO TOP
+function scrollBackToTop() {
+    let scrollEl = document.querySelector('#scrollUp');
+    window.onscroll = () => {
+        var scrollTopValue = document.documentElement.scrollTop;
+        console.log(scrollTopValue);
+        if (scrollTopValue > 100) {
+            scrollEl.classList.add('scrollActive');
+        } else {
+            scrollEl.classList.remove('scrollActive');
+        }
+    };
+}
+scrollBackToTop();
 
 // NAV HIDE
