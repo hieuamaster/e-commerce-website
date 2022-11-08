@@ -27,7 +27,6 @@ function scrollBackToTop() {
     let scrollEl = document.querySelector('#scrollUp');
     window.onscroll = () => {
         var scrollTopValue = document.documentElement.scrollTop;
-        console.log(scrollTopValue);
         if (scrollTopValue > 100) {
             scrollEl.classList.add('scrollActive');
         } else {
@@ -38,3 +37,14 @@ function scrollBackToTop() {
 scrollBackToTop();
 
 // NAV HIDE
+
+let navBarEl = document.querySelectorAll('.nav-link');
+let navCollapseEl = document.querySelector('.navbar-collapse.collapse');
+console.log(navBarEl);
+
+console.log(navCollapseEl);
+navBarEl.forEach(function (e) {
+    e.addEventListener('click', function () {
+        navCollapseEl.classList.remove('show');
+    });
+});
